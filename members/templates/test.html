@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>{% now "j.F.Y l G:i" %}</h1>
+
+<ul>
+  {% for x in mymembers %}
+    {% if x.entries > 0 %}
+        <li>
+            {{ x.id }}
+            {{ x.firstname }}
+            {{ x.lastname }}
+            {{ x.entries }}
+        </li>
+    {% else %}
+        <li>
+            ID: {{ x.id }} <br>
+            First name: {{ x.firstname }} <br>
+            Last name: {{x.lastname }} <br>
+            Entries: {{ x.entries }}
+        </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+<p>In views.py you can see what the fruits variable looks like.</p>
+<ul>
+    {% for x in mymembers %}
+        <li>
+        {{ x.id }} <br>
+        {{ x.firstname }}<br>
+        {{ x.lastname }}
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

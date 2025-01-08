@@ -1,0 +1,37 @@
+{% extends "masters.html" %}
+
+{% block title %}
+  My Gym club - List of all members
+{% endblock %}
+
+
+{% block content %}
+
+<!--  <p><a href="/">HOME</a></p>-->
+
+  <h1>Members</h1>
+<h2>
+    <table border="8">
+    <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Details</th>
+    </tr>
+    {% for x in mymembers %}
+    <tr>
+        <td> {{ x.id }} </td>
+        <td> {{ x.firstname}} </td>
+        <td> {{ x.lastname}} </td>
+        <td> <a href="details/{{ x.id }}">details</a> </td>
+    </tr>
+    {% endfor %}
+    </table>
+</h2>
+<!--  <ul>-->
+<!--    {% for x in mymembers %}-->
+<!--      <li><a href="details/{{ x.id }}">{{ x.id}} {{ x.firstname }} {{ x.lastname }}</a></li>-->
+<!--    {% endfor %}-->
+<!--  </ul>-->
+<!--  <p> <a href="/"> Back to main page </a></p>-->
+<!--{% endblock %}-->

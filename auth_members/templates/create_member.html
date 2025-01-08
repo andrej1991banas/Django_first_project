@@ -1,0 +1,44 @@
+{% extends "masters.html" %}
+
+{% block title %}
+  My Gym club - Registration
+{% endblock %}
+
+
+{% block content %}
+
+<div>
+    <a href="{% url '' %}">HOME</a> |
+    <a href="{% url 'members' %}">OUR MEMBERS</a> |
+    <a href="{% url 'mylogin' %}">PRIHLAS SA</a> |
+    GYMS
+</div>
+
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+
+
+
+<body>
+    <h1>Register now!</h1>
+    <h4>
+        <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Create Member</button>
+    </form>
+    </h4>
+</body>
+
+{% endblock %}</title>
+</head>
+<body>
+
+</body>
+</html>

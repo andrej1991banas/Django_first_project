@@ -1,0 +1,38 @@
+{% extends "masters.html" %}
+
+{% block title %}
+  My Gym club - List of all members
+{% endblock %}
+
+
+{% block content %}
+
+<div>
+    <a href="{% url '' %}">HOME</a> |
+    <a href="{% url 'register' %}">REGISTRUJ SA</a> |
+    <a href="{% url 'mylogin' %}">PRIHLAS SA</a> |
+    GYMS
+</div>
+
+
+  <h1>Members</h1>
+<h2>
+    <table border="8">
+    <tr>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Details</th>
+    </tr>
+    {% for x in mymembers %}
+    <tr>
+        <td> {{ x.id }} </td>
+        <td> {{ x.firstname}} </td>
+        <td> {{ x.lastname}} </td>
+        <td> <a href="details/{{ x.id }}">details</a> </td>
+    </tr>
+    {% endfor %}
+    </table>
+</h2>
+  <p> <a href="/"> Back to main page </a></p>
+{% endblock %} 

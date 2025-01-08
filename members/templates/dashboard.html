@@ -1,0 +1,21 @@
+{% extends "masters.html" %}
+
+{% block title %}
+  My Gym Club
+{% endblock %}
+
+
+{% block content %}
+
+<h1> Your dashboard here </h1>
+
+<h1>{{ mymember.firstname }} {{ mymember.lastname }}</h1>
+
+  <h2>Entries: {{ mymember.entries }}</h2>
+  <h3>Member since: {{ mymember.joined_date }}</h3>
+
+<h1>
+    <a href="{% url 'user-logout' %}"/> Odhlas sa </a>
+</h1>
+
+{% endblock %}

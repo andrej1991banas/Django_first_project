@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'first.css' %}">
+  <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+
+
+
+<h1>{% now "j.F  Y l" %}</h1>
+<h1>{% now "G:i" %}</h1>
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>

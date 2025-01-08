@@ -1,0 +1,23 @@
+{% extends "masters.html" %}
+
+{% block title %}
+  My Gym club - Log In
+{% endblock %}
+
+
+{% block content %}
+
+<div><a href="/">HOME</a> | <a href="members/">OUR MEMBERS</a> | <a href="register">REGISTRUJ SA</a> | GYMS | </div>
+
+
+<h1> Login here! </h1>
+<h1>
+    <form method="POST" autocomplete="off">
+        {% csrf_token %}
+        {{ loginform.as_p }}
+        <h2><input type="submit" value="Prihlas sa tu" /></h2>
+    </form>
+</h1>
+
+
+{% endblock %}
