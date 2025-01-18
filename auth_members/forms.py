@@ -12,7 +12,7 @@ class MemberUserForm(forms.ModelForm):
     def save(self, commit=True):
         # Override save to handle password encryption
         user = super().save(commit=False)
-        user.set_password(self.cleaned_data['password'])  # Hash the password
+        user.set_password(self.cleaned_data['password']) 
         if commit:
             user.save()
         return user
