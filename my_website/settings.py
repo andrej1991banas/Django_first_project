@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'budlimitless_clients',
-        'USER': 'andrejadmin',
-        'PASSWORD':'Speyya1991????)',
+        'USER': '',
+        'PASSWORD':'',
         'HOST': 'postgresql.r1.websupport.sk',
         'PORT': '5432'
     }
